@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import 'froala-editor/js/froala_editor.pkgd.min.js';
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
-// import 'font-awesome/css/font-awesome.css';
+import '@fortawesome/fontawesome-free/css/fontawesome.css';
 import FroalaEditorView from 'react-froala-wysiwyg/FroalaEditorView';
 import FroalaEditorA from 'react-froala-wysiwyg/FroalaEditorA';
 import FroalaEditorButton from 'react-froala-wysiwyg/FroalaEditorButton';
