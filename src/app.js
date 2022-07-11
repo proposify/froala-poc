@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import HelloWorld from './helloworld';
+import FroalaPage from './froala';
 
-render(<HelloWorld />, document.getElementById('app-root'));
+render(<FroalaPage />, document.getElementById('app-root'));
