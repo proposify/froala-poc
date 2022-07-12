@@ -1,49 +1,31 @@
 {
-  "name": "y",
+  "name": "froala-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "dev:server": "webpack-dev-server",
-    "start-now": "concurrently \"npm:dev\" \"npm:dev:server\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/proposify/froala-poc.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/proposify/froala-poc/issues"
-  },
-  "homepage": "https://github.com/proposify/froala-poc#readme",
+  "keywords": [],
+  "main": "src/index.tsx",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-froala-wysiwyg": "^4.0.13"
+    "froala-editor": "3.0.4",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-froala-wysiwyg": "^4.0.13",
+    "react-scripts": "2.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.6",
-    "@babel/plugin-proposal-optional-chaining": "^7.18.6",
-    "@babel/preset-env": "^7.18.6",
-    "@babel/preset-react": "^7.18.6",
-    "babel-loader": "^8.2.5",
-    "crypto": "^1.0.1",
-    "css-loader": "5.2.7",
-    "html-webpack-plugin": "^4.5.2",
-    "react-tribute": "^1.0.4",
-    "style-loader": "^2.0.0",
-    "tributejs": "^3.7.3",
-    "webpack": "4.46.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "typescript": "3.3.3"
   },
-  "browser": {
-    "crypto": false
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
