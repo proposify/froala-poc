@@ -12,7 +12,7 @@ import FroalaEditorInput from 'react-froala-wysiwyg/FroalaEditorInput';
 import FroalaEditor from 'react-froala-wysiwyg';
 
 
-const FroalaPage = () => {
+const FroalaPageEditor = () => {
   const ref = useRef({ editor: null });
   const [isFroalaInitialized, setIsFroalaInitialized] = useState(false);
   // const tribute = new Tribute(options);
@@ -147,4 +147,4 @@ const FroalaPage = () => {
    );
 }
  
-export default FroalaPage;
+export default FroalaPageEditor;

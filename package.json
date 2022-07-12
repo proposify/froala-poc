@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "dev:server": "webpack-dev-server",
+    "start-now": "concurrently \"npm:dev\" \"npm:dev:server\""
   },
   "repository": {
     "type": "git",

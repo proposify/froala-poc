@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import FroalaPage from './froala';
+import FroalaPageEditor from './froala';
 
-render(<FroalaPage />, document.getElementById('app-root'));
+render(<FroalaPageEditor />, document.getElementById('app-root'));
