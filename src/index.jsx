@@ -3,7 +3,8 @@ import { render } from "react-dom";
 
 import { FroalaEditor } from "./FroalaEditor";
 
-const App: React.FC = () => {
+
+const App = () => {
   return <FroalaEditor />;
 };
 

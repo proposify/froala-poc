@@ -21,11 +21,20 @@ import "froala-editor/css/third_party/embedly.min.css";
 
 import Froala from "react-froala-wysiwyg";
 import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
-import { options } from "./options";
-import FroalaEditorA from 'react-froala-wysiwyg/FroalaEditorA';
-import FroalaEditorButton from 'react-froala-wysiwyg/FroalaEditorButton';
-import FroalaEditorImg from 'react-froala-wysiwyg/FroalaEditorImg';
-import FroalaEditorInput from 'react-froala-wysiwyg/FroalaEditorInput';
+import 'froala-editor/css/froala_editor.pkgd.min.css';
+import 'froala-editor/css/froala_style.css';
+import Froalaeditor from 'froala-editor';
+
+Froalaeditor.DefineIcon('insert', {NAME: 'plus', SVG_KEY: 'add'});
+Froalaeditor.RegisterCommand('insert', {
+  title: 'Insert HTML',
+  focus: true,
+  undo: true,
+  refreshAfterCallback: true,
+  callback: function () {
+    this.html.insert('My New HTML');
+  }
+});
 
 export const FroalaEditor = () => {
   const ref = useRef({ editor: {data: {_init: null}} });
@@ -98,7 +107,8 @@ export const FroalaEditor = () => {
                   "backgroundColor",
                   "inlineClass",
                   "inlineStyle",
-                  "clearFormatting"
+                  "clearFormatting",
+                  'insert'
                 ]
               },
               moreParagraph: {
@@ -115,7 +125,8 @@ export const FroalaEditor = () => {
                   "lineHeight",
                   "outdent",
                   "indent",
-                  "quote"
+                  "quote",
+                  'insert'
                 ]
               },
               moreRich: {
@@ -129,7 +140,8 @@ export const FroalaEditor = () => {
                   "specialCharacters",
                   "embedly",
                   "insertFile",
-                  "insertHR"
+                  "insertHR",
+                  'insert'
                 ]
               },
               moreMisc: {
@@ -142,7 +154,8 @@ export const FroalaEditor = () => {
                   "spellChecker",
                   "selectAll",
                   "html",
-                  "help"
+                  "help",
+                  'insert'
                 ],
                 align: "right",
                 buttonsVisible: 2
@@ -171,6 +184,7 @@ export const FroalaEditor = () => {
               "entities",
               "inlineClass",
               "inlineStyle",
+              'insert',
               // 'codeBeautif '
               // 'spellChecker',
               "imageTUI"
